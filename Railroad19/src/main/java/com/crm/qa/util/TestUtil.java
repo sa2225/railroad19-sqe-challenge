@@ -9,6 +9,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.app.qa.base.TestBase;
 
+/**
+ * This is the utility class for the test suite
+ * 
+ * @author Saniya Anand
+ *
+ */
 public class TestUtil extends TestBase {
 
 		public static long PAGE_LOAD_TIMEOUT = 30;
@@ -36,7 +42,7 @@ public class TestUtil extends TestBase {
 		 * @param input
 		 * @return
 		 */
-		public static String fetchSecondHalfofText(WebElement input) {
+		public static String fetchSecondHalfOfText(WebElement input) {
 			if(input!=null && input.getText()!=null) {
 				return input.getText().split(" ")[1];
 			} else {

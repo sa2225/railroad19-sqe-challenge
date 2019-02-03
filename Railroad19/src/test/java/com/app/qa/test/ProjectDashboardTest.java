@@ -125,9 +125,7 @@ public class ProjectDashboardTest extends TestBase {
 	public void validateBudgetFormatOnUpdate() {
 		
 		NumberFormat formatter = NumberFormat.getCurrencyInstance();
-		String newBudget = formatter.format(Long.parseLong(TestUtil.NEW_BUDGET_VALUE));
-		System.out.println("The expected budget value is :: " + newBudget);
-		
+		String newBudget = formatter.format(Long.parseLong(TestUtil.NEW_BUDGET_VALUE));		
 		Assert.assertEquals(newBudget, projectDashboard.getCurrencyFormattingOnUpdate(), 
 				"Test Failed - The budget currency is not getting formatted!");
 	}

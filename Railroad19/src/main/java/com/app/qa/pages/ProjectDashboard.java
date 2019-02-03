@@ -23,12 +23,6 @@ public class ProjectDashboard extends TestBase {
 	@FindBy(xpath="//md-toolbar[@class='sideNavHeader md-whiteframe-21dp']/h4")
 	WebElement header;
 	
-	@FindBy(xpath="//md-content[@class='layout-padding']/h4[1]")
-	WebElement navigation_dashboard;	
-
-	@FindBy(xpath="//md-content[@class='layout-padding']/h4[2]")
-	WebElement navigation_profile;
-	
 	/** Finding Statistics **/
 	
 	@FindBy(xpath="//p[contains(text(), 'Accounting')]")
@@ -64,6 +58,12 @@ public class ProjectDashboard extends TestBase {
 	@FindBy(css="#searchCard button:nth-child(1)")
 	WebElement addRecordsButton;
 	
+	@FindBy(css="md-card.projCard:first-child > div:nth-of-type(3) > span + img")
+	WebElement editButton;
+	
+	@FindBy(css="md-card.projCard:first-child > div:nth-of-type(3) > span + img + md-input-container > input")
+	WebElement projectOwnerInputField;
+	
 	List<WebElement> divisions;
 	List<WebElement> statuses; 
 
@@ -96,7 +96,7 @@ public class ProjectDashboard extends TestBase {
 	 * @return stats_accounting_count
 	 */
 	public String statsDivisionAccounting() {
-		String stats_accounting_count = TestUtil.fetchSecondHalfofText(stats_accounting);
+		String stats_accounting_count = TestUtil.fetchSecondHalfOfText(stats_accounting);
 		System.out.println("The statistics show 'Accounting' count = " + stats_accounting_count);
 		return stats_accounting_count;
 	}
@@ -108,7 +108,7 @@ public class ProjectDashboard extends TestBase {
 	 * @return stats_administration_count
 	 */
 	public String statsDivisionAdministration() {
-		String stats_administration_count = TestUtil.fetchSecondHalfofText(stats_administration);
+		String stats_administration_count = TestUtil.fetchSecondHalfOfText(stats_administration);
 		System.out.println("The statistics show 'Administration' count = " + stats_administration_count);
 		return stats_administration_count;
 	}
@@ -120,7 +120,7 @@ public class ProjectDashboard extends TestBase {
 	 * @return stats_marketing_count
 	 */
 	public String statsDivisionMarketing() {
-		String stats_marketing_count = TestUtil.fetchSecondHalfofText(stats_marketing);
+		String stats_marketing_count = TestUtil.fetchSecondHalfOfText(stats_marketing);
 		System.out.println("The statistics show 'Marketing' count = " + stats_marketing_count);
 		return stats_marketing_count;
 	}
@@ -132,7 +132,7 @@ public class ProjectDashboard extends TestBase {
 	 * @return stats_sales_count
 	 */
 	public String statsDivisionSales() {
-		String stats_sales_count = TestUtil.fetchSecondHalfofText(stats_sales);
+		String stats_sales_count = TestUtil.fetchSecondHalfOfText(stats_sales);
 		System.out.println("The statistics show 'Sales' count = " + stats_sales_count);
 		return stats_sales_count;
 	}
@@ -144,7 +144,7 @@ public class ProjectDashboard extends TestBase {
 	 * @return stats_production_count
 	 */
 	public String statsDivisionProduction() {
-		String stats_production_count = TestUtil.fetchSecondHalfofText(stats_sales);
+		String stats_production_count = TestUtil.fetchSecondHalfOfText(stats_sales);
 		System.out.println("The statistics show 'Production' count = " + stats_production_count);
 		return stats_production_count;
 	}
@@ -156,7 +156,7 @@ public class ProjectDashboard extends TestBase {
 	 * @return stats_production_count
 	 */
 	public String statsStatusArchived() {
-		String stats_archived_count = TestUtil.fetchSecondHalfofText(stats_archived);
+		String stats_archived_count = TestUtil.fetchSecondHalfOfText(stats_archived);
 		System.out.println("The statistics show 'Archived' count = " + stats_archived_count);
 		return stats_archived_count;
 	}
@@ -168,7 +168,7 @@ public class ProjectDashboard extends TestBase {
 	 * @return stats_new_count
 	 */
 	public String statsStatusNew() {
-		String stats_new_count = TestUtil.fetchSecondHalfofText(stats_new);
+		String stats_new_count = TestUtil.fetchSecondHalfOfText(stats_new);
 		System.out.println("The statistics show 'New' count = " + stats_new_count);
 		return stats_new_count;
 	}
@@ -180,7 +180,7 @@ public class ProjectDashboard extends TestBase {
 	 * @return stats_working_count
 	 */
 	public String statsStatusWorking() {
-		String stats_working_count = TestUtil.fetchSecondHalfofText(stats_working);
+		String stats_working_count = TestUtil.fetchSecondHalfOfText(stats_working);
 		System.out.println("The statistics show 'Working' count = " + stats_working_count);
 		return stats_working_count;
 	}
@@ -192,7 +192,7 @@ public class ProjectDashboard extends TestBase {
 	 * @return stats_working_count
 	 */
 	public String statsStatusDelivered() {
-		String stats_delivered_count = TestUtil.fetchSecondHalfofText(stats_delivered);
+		String stats_delivered_count = TestUtil.fetchSecondHalfOfText(stats_delivered);
 		System.out.println("The statistics show 'Delivered' count = " + stats_delivered_count);
 		return stats_delivered_count;
 	}
@@ -371,7 +371,7 @@ public class ProjectDashboard extends TestBase {
 		
 		// Getting the statistics for the original status (BEFORE UDPATE)
 		WebElement originalStatusStat = driver.findElement(By.xpath("//p[contains(text(),'" + originalStatusText.toLowerCase() + "')]"));
-		originalAndUpdatedStatistics.put(TestUtil.ORIGINAL_STAT_BEFORE_UPDATE, TestUtil.fetchSecondHalfofText(originalStatusStat));
+		originalAndUpdatedStatistics.put(TestUtil.ORIGINAL_STAT_BEFORE_UPDATE, TestUtil.fetchSecondHalfOfText(originalStatusStat));
 		WebElement newStatusStat; // Will hold the statistic for the new status (BEFORE UPDATE)
 		
 		// Getting the edit button element for the first record
@@ -407,7 +407,7 @@ public class ProjectDashboard extends TestBase {
 			newStatusStat = driver.findElement(By.xpath("//p[contains(text(),'archived')]"));
 			
 		}
-		originalAndUpdatedStatistics.put(TestUtil.NEW_STAT_BEFORE_UPDATE, TestUtil.fetchSecondHalfofText(newStatusStat));
+		originalAndUpdatedStatistics.put(TestUtil.NEW_STAT_BEFORE_UPDATE, TestUtil.fetchSecondHalfOfText(newStatusStat));
 		
 		/*** NOW UPDATING RECORD ***/
 		System.out.println("Saving changes to status field...");
@@ -418,8 +418,8 @@ public class ProjectDashboard extends TestBase {
 		newStatusStat = driver.findElement(By.xpath("//p[contains(text(),'" + newStatusText.toLowerCase() + "')]")); // AFTER UPDATE
 		
 		// Adding updated statistics into the map
-		originalAndUpdatedStatistics.put(TestUtil.NEW_STAT_AFTER_UPDATE, TestUtil.fetchSecondHalfofText(newStatusStat)); // AFTER UPDATE
-		originalAndUpdatedStatistics.put(TestUtil.ORIGINAL_STAT_AFTER_UPDATE, TestUtil.fetchSecondHalfofText(originalStatusStat)); // AFTER UPDATE
+		originalAndUpdatedStatistics.put(TestUtil.NEW_STAT_AFTER_UPDATE, TestUtil.fetchSecondHalfOfText(newStatusStat)); // AFTER UPDATE
+		originalAndUpdatedStatistics.put(TestUtil.ORIGINAL_STAT_AFTER_UPDATE, TestUtil.fetchSecondHalfOfText(originalStatusStat)); // AFTER UPDATE
 		 
 		System.out.println("The original & updated statistics are :: " + originalAndUpdatedStatistics);
 		
@@ -435,8 +435,6 @@ public class ProjectDashboard extends TestBase {
 	public boolean isShowingFeedbackForRecordUpdate() {
 		System.out.println("Fetching the project owner elements of the first record");
 		// Extracting the original status text of the first record's status container element
-		WebElement editButton = driver.findElement(By.cssSelector("md-card.projCard:first-child > div:nth-of-type(3) > span + img"));
-		WebElement projectOwnerInputField = driver.findElement(By.cssSelector("md-card.projCard:first-child > div:nth-of-type(3) > span + img + md-input-container > input"));
 		
 		// Clicking the edit button & clearing the input field
 		System.out.println("Going to click edit button for project owner...");
@@ -474,9 +472,6 @@ public class ProjectDashboard extends TestBase {
 		System.out.println("Fetching the project owner elements of the first record");
 		// Extracting the original status text of the first record's status container element
 		WebElement projectOwner = driver.findElement(By.cssSelector("md-card.projCard:first-child > div:nth-of-type(3) > span"));
-		WebElement editButton = driver.findElement(By.cssSelector("md-card.projCard:first-child > div:nth-of-type(3) > span + img"));
-		WebElement projectOwnerInputField = driver.findElement(By.cssSelector("md-card.projCard:first-child > div:nth-of-type(3) > span + img + md-input-container > input"));
-		
 		
 		originalAndUpdatedProjectOwner.put(TestUtil.PROJECT_OWNER_BEFORE_UPDATE, projectOwner.getText());
 		
@@ -511,12 +506,12 @@ public class ProjectDashboard extends TestBase {
 	public String getCurrencyFormattingOnUpdate() {
 		
 		System.out.println("Fetching the budget element of the first record");
-		WebElement editButton = driver.findElement(By.cssSelector("md-card.projCard:first-child > div:nth-of-type(4) > span + img"));
+		WebElement editBudgetButton = driver.findElement(By.cssSelector("md-card.projCard:first-child > div:nth-of-type(4) > span + img"));
 		WebElement budgetInputField = driver.findElement(By.cssSelector("md-card.projCard:first-child > div:nth-of-type(4) > span + img + md-input-container > input"));
 
 		// Clicking the edit button & clearing the input field
 		System.out.println("Going to click edit button for project owner...");
-		editButton.click();
+		editBudgetButton.click();
 		System.out.println("Clearing budget input field...");
 		budgetInputField.clear();
 		
@@ -526,7 +521,7 @@ public class ProjectDashboard extends TestBase {
 		
 		// Saving the new budget value
 		System.out.println("Saving the new value...");
-		editButton.click();
+		editBudgetButton.click();
 
 		// Fetching the budget field value after saving
 		System.out.println("Getting the value of the budget field after saving the new value...");
