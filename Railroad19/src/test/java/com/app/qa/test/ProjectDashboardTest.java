@@ -13,7 +13,9 @@ import com.app.qa.pages.ProjectDashboard;
 import com.crm.qa.util.TestUtil;
 
 public class ProjectDashboardTest extends TestBase {
-ProjectDashboard projectDashboard;
+	
+	ProjectDashboard projectDashboard;
+	
 	public ProjectDashboardTest() {
 		super();
 	}
@@ -23,19 +25,6 @@ ProjectDashboard projectDashboard;
 		initialization();
 		projectDashboard= new ProjectDashboard();
 		
-	}
-	
-	@Test
-	public void validateLogo() {
-		String logo = projectDashboard.verifyLogo();
-		Assert.assertEquals(logo, "Project Dashboard");
-	}
-	
-	@Test
-	public void validatePageTitle() {
-		String title = driver.getTitle();
-		System.out.println(title);
-		Assert.assertEquals(title, "Project Dashboard");
 	}
 	
 	/** TESTING DIVISION STATISTICS **/
@@ -135,6 +124,18 @@ ProjectDashboard projectDashboard;
 		
 		Assert.assertEquals(newBudget, projectDashboard.getCurrencyFormattingOnUpdate(), 
 				"Test Failed - The budget currency is not getting formatted!");
+	}
+	
+	@Test
+	public void validatePageHeaderText() {
+		Assert.assertEquals(projectDashboard.getHeader(), TestUtil.PAGE_HEADER, 
+				"Test Failed - The page header did not match the expected value");
+	}
+	
+	@Test
+	public void validatePageHTMLTitle() {
+		Assert.assertEquals(driver.getTitle(), TestUtil.PAGE_HEADER,
+				"Test Failed - The page HTML title did not match the expected value");
 	}
 	
 	@AfterMethod

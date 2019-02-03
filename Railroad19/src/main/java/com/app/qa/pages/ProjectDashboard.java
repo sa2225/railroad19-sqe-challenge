@@ -1,7 +1,5 @@
 package com.app.qa.pages;
 
-import java.text.NumberFormat;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +15,7 @@ import com.crm.qa.util.TestUtil;
 public class ProjectDashboard extends TestBase {
 	
 	@FindBy(xpath="//md-toolbar[@class='sideNavHeader md-whiteframe-21dp']/h4")
-	WebElement logo;
+	WebElement header;
 	
 	@FindBy(xpath="//md-content[@class='layout-padding']/h4[1]")
 	WebElement navigation_dashboard;	
@@ -68,10 +66,15 @@ public class ProjectDashboard extends TestBase {
 		statuses = driver.findElements(By.cssSelector("md-card.projCard > div:nth-of-type(5) > span"));
 	}
 
-	public String verifyLogo() {
-		String logoText	= logo.getText();
-		System.out.println(logoText);
-		return logoText;
+	/** 
+	 * This method retrieves the page header
+	 * 
+	 * @return headerText
+	 */
+	public String getHeader() {
+		String headerText = header.getText();
+		System.out.println("Header text obtained :: " + headerText);
+		return headerText;
 	}
 	
 	/**

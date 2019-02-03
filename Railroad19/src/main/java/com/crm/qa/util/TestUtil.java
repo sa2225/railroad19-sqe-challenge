@@ -2,7 +2,6 @@ package com.crm.qa.util;
 
 import java.util.List;
 
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -14,6 +13,8 @@ public class TestUtil extends TestBase {
 
 		public static long PAGE_LOAD_TIMEOUT = 30;
 		public static long IMPLICIT_WAIT = 20;
+		
+		public static final String PAGE_HEADER = "Project Dashboard";
 		
 		public static final String ORIGINAL_STAT_BEFORE_UPDATE = "ORIGINAL_STAT_BEFORE_UPDATE";
 		public static final String ORIGINAL_STAT_AFTER_UPDATE = "ORIGINAL_STAT_AFTER_UPDATE";
