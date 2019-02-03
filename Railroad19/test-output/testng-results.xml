@@ -1,21 +1,363 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="3" ignored="0" total="20" passed="17">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6430" started-at="2019-02-03T17:41:29Z" finished-at="2019-02-03T17:41:35Z">
+  <suite name="Default suite" duration-ms="116668" started-at="2019-02-03T23:06:32Z" finished-at="2019-02-03T23:08:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6430" started-at="2019-02-03T17:41:29Z" finished-at="2019-02-03T17:41:35Z">
+    <test name="Default test" duration-ms="116668" started-at="2019-02-03T23:06:32Z" finished-at="2019-02-03T23:08:28Z">
       <class name="com.app.qa.test.ProjectDashboardTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@ae45eb6]" name="setUp" is-config="true" duration-ms="5161" started-at="2019-02-03T17:41:29Z" finished-at="2019-02-03T17:41:34Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="6459" started-at="2019-02-03T23:06:32Z" finished-at="2019-02-03T23:06:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateBudgetFormatOnUpdate()[pri:13, instance:com.app.qa.test.ProjectDashboardTest@ae45eb6]" name="validateBudgetFormatOnUpdate" duration-ms="597" started-at="2019-02-03T17:41:34Z" finished-at="2019-02-03T17:41:34Z">
+        <test-method status="PASS" signature="checkAddRecordButtonDisabled()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="checkAddRecordButtonDisabled" duration-ms="34" started-at="2019-02-03T23:06:38Z" finished-at="2019-02-03T23:06:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkAddRecordButtonDisabled -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="715" started-at="2019-02-03T23:06:38Z" finished-at="2019-02-03T23:06:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4523" started-at="2019-02-03T23:06:39Z" finished-at="2019-02-03T23:06:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="checkAddRecordButtonVisibility()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="checkAddRecordButtonVisibility" duration-ms="36" started-at="2019-02-03T23:06:43Z" finished-at="2019-02-03T23:06:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkAddRecordButtonVisibility -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="738" started-at="2019-02-03T23:06:43Z" finished-at="2019-02-03T23:06:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4485" started-at="2019-02-03T23:06:44Z" finished-at="2019-02-03T23:06:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="checkExportButtonDisabled()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="checkExportButtonDisabled" duration-ms="31" started-at="2019-02-03T23:06:49Z" finished-at="2019-02-03T23:06:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkExportButtonDisabled -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="741" started-at="2019-02-03T23:06:49Z" finished-at="2019-02-03T23:06:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4511" started-at="2019-02-03T23:06:49Z" finished-at="2019-02-03T23:06:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="checkExportButtonVisibility()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="checkExportButtonVisibility" duration-ms="34" started-at="2019-02-03T23:06:54Z" finished-at="2019-02-03T23:06:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkExportButtonVisibility -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="690" started-at="2019-02-03T23:06:54Z" finished-at="2019-02-03T23:06:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4568" started-at="2019-02-03T23:06:55Z" finished-at="2019-02-03T23:06:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validatePageHTMLTitle()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="validatePageHTMLTitle" duration-ms="7" started-at="2019-02-03T23:06:59Z" finished-at="2019-02-03T23:06:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatePageHTMLTitle -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="689" started-at="2019-02-03T23:06:59Z" finished-at="2019-02-03T23:07:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4533" started-at="2019-02-03T23:07:00Z" finished-at="2019-02-03T23:07:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validatePageHeaderText()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="validatePageHeaderText" duration-ms="35" started-at="2019-02-03T23:07:04Z" finished-at="2019-02-03T23:07:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatePageHeaderText -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="700" started-at="2019-02-03T23:07:04Z" finished-at="2019-02-03T23:07:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4519" started-at="2019-02-03T23:07:05Z" finished-at="2019-02-03T23:07:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="validateRowAlignment()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="validateRowAlignment" duration-ms="47" started-at="2019-02-03T23:07:10Z" finished-at="2019-02-03T23:07:10Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Test Failed - The page rows are not aligned to the left (Horizontally) as their x-axis values do not match expected [120] but found [105]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Test Failed - The page rows are not aligned to the left (Horizontally) as their x-axis values do not match expected [120] but found [105]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at com.app.qa.test.ProjectDashboardTest.validateRowAlignment(ProjectDashboardTest.java:138)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateRowAlignment -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="675" started-at="2019-02-03T23:07:10Z" finished-at="2019-02-03T23:07:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4472" started-at="2019-02-03T23:07:10Z" finished-at="2019-02-03T23:07:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateAccountingStatistics()[pri:1, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="validateAccountingStatistics" duration-ms="747" started-at="2019-02-03T23:07:15Z" finished-at="2019-02-03T23:07:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAccountingStatistics -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="703" started-at="2019-02-03T23:07:16Z" finished-at="2019-02-03T23:07:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4580" started-at="2019-02-03T23:07:16Z" finished-at="2019-02-03T23:07:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateAdministrationStatistics()[pri:2, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="validateAdministrationStatistics" duration-ms="751" started-at="2019-02-03T23:07:21Z" finished-at="2019-02-03T23:07:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAdministrationStatistics -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="706" started-at="2019-02-03T23:07:22Z" finished-at="2019-02-03T23:07:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4564" started-at="2019-02-03T23:07:22Z" finished-at="2019-02-03T23:07:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateMarketingStatistics()[pri:3, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="validateMarketingStatistics" duration-ms="749" started-at="2019-02-03T23:07:27Z" finished-at="2019-02-03T23:07:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateMarketingStatistics -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="676" started-at="2019-02-03T23:07:28Z" finished-at="2019-02-03T23:07:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4500" started-at="2019-02-03T23:07:28Z" finished-at="2019-02-03T23:07:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateSalesStatistics()[pri:4, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="validateSalesStatistics" duration-ms="727" started-at="2019-02-03T23:07:33Z" finished-at="2019-02-03T23:07:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSalesStatistics -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="708" started-at="2019-02-03T23:07:34Z" finished-at="2019-02-03T23:07:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4503" started-at="2019-02-03T23:07:34Z" finished-at="2019-02-03T23:07:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateProductionStatistics()[pri:5, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="validateProductionStatistics" duration-ms="737" started-at="2019-02-03T23:07:39Z" finished-at="2019-02-03T23:07:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateProductionStatistics -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="715" started-at="2019-02-03T23:07:40Z" finished-at="2019-02-03T23:07:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4508" started-at="2019-02-03T23:07:40Z" finished-at="2019-02-03T23:07:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateArchivedStatistics()[pri:6, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="validateArchivedStatistics" duration-ms="726" started-at="2019-02-03T23:07:45Z" finished-at="2019-02-03T23:07:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateArchivedStatistics -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="726" started-at="2019-02-03T23:07:45Z" finished-at="2019-02-03T23:07:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4449" started-at="2019-02-03T23:07:46Z" finished-at="2019-02-03T23:07:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateNewStatistics()[pri:7, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="validateNewStatistics" duration-ms="718" started-at="2019-02-03T23:07:51Z" finished-at="2019-02-03T23:07:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateNewStatistics -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="640" started-at="2019-02-03T23:07:51Z" finished-at="2019-02-03T23:07:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4509" started-at="2019-02-03T23:07:52Z" finished-at="2019-02-03T23:07:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateWorkingStatistics()[pri:8, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="validateWorkingStatistics" duration-ms="762" started-at="2019-02-03T23:07:57Z" finished-at="2019-02-03T23:07:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateWorkingStatistics -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="720" started-at="2019-02-03T23:07:57Z" finished-at="2019-02-03T23:07:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4575" started-at="2019-02-03T23:07:58Z" finished-at="2019-02-03T23:08:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateDeliveredStatistics()[pri:9, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="validateDeliveredStatistics" duration-ms="713" started-at="2019-02-03T23:08:03Z" finished-at="2019-02-03T23:08:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateDeliveredStatistics -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="700" started-at="2019-02-03T23:08:03Z" finished-at="2019-02-03T23:08:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4522" started-at="2019-02-03T23:08:04Z" finished-at="2019-02-03T23:08:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="validateStatusUpdateStatistics()[pri:10, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="validateStatusUpdateStatistics" duration-ms="495" started-at="2019-02-03T23:08:09Z" finished-at="2019-02-03T23:08:09Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Test Failed - Statistics are not getting updated on updating the status of a record! expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Test Failed - Statistics are not getting updated on updating the status of a record! expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at com.app.qa.test.ProjectDashboardTest.validateStatusUpdateStatistics(ProjectDashboardTest.java:107)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateStatusUpdateStatistics -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="713" started-at="2019-02-03T23:08:09Z" finished-at="2019-02-03T23:08:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4517" started-at="2019-02-03T23:08:10Z" finished-at="2019-02-03T23:08:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="validateRecordUpdateSaveOnRefresh()[pri:11, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="validateRecordUpdateSaveOnRefresh" duration-ms="1335" started-at="2019-02-03T23:08:14Z" finished-at="2019-02-03T23:08:16Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Test Failed - The updates made to the record were not refelected after page refresh!]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Test Failed - The updates made to the record were not refelected after page refresh!
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.assertNotEquals(Assert.java:1157)
+at com.app.qa.test.ProjectDashboardTest.validateRecordUpdateSaveOnRefresh(ProjectDashboardTest.java:114)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateRecordUpdateSaveOnRefresh -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="734" started-at="2019-02-03T23:08:16Z" finished-at="2019-02-03T23:08:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4552" started-at="2019-02-03T23:08:16Z" finished-at="2019-02-03T23:08:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateFeedbackOnUpdate()[pri:12, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="validateFeedbackOnUpdate" duration-ms="752" started-at="2019-02-03T23:08:21Z" finished-at="2019-02-03T23:08:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateFeedbackOnUpdate -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="709" started-at="2019-02-03T23:08:22Z" finished-at="2019-02-03T23:08:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4603" started-at="2019-02-03T23:08:22Z" finished-at="2019-02-03T23:08:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateBudgetFormatOnUpdate()[pri:13, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="validateBudgetFormatOnUpdate" duration-ms="610" started-at="2019-02-03T23:08:27Z" finished-at="2019-02-03T23:08:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateBudgetFormatOnUpdate -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@ae45eb6]" name="tearDown" is-config="true" duration-ms="651" started-at="2019-02-03T17:41:34Z" finished-at="2019-02-03T17:41:35Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="719" started-at="2019-02-03T23:08:28Z" finished-at="2019-02-03T23:08:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

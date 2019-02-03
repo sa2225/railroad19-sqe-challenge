@@ -16,6 +16,9 @@ public class TestUtil extends TestBase {
 		
 		public static final String PAGE_HEADER = "Project Dashboard";
 		
+		public static final String RECORDS_ROW = "RECORDS_ROW";
+		public static final String STATS_CONTROLS_ROW = "STATS_CONTROLS_ROW";
+		
 		public static final String ORIGINAL_STAT_BEFORE_UPDATE = "ORIGINAL_STAT_BEFORE_UPDATE";
 		public static final String ORIGINAL_STAT_AFTER_UPDATE = "ORIGINAL_STAT_AFTER_UPDATE";
 		public static final String NEW_STAT_BEFORE_UPDATE = "NEW_STAT_BEFORE_UPDATE";

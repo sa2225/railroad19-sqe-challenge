@@ -12,6 +12,12 @@ import org.openqa.selenium.support.PageFactory;
 import com.app.qa.base.TestBase;
 import com.crm.qa.util.TestUtil;
 
+/**
+ * This class is responsible for the project dashboard page
+ * 
+ * @author Saniya Anand
+ *
+ */
 public class ProjectDashboard extends TestBase {
 	
 	@FindBy(xpath="//md-toolbar[@class='sideNavHeader md-whiteframe-21dp']/h4")
@@ -51,6 +57,12 @@ public class ProjectDashboard extends TestBase {
 
 	@FindBy(xpath="//p[contains(text(), 'delivered')]")
 	WebElement stats_delivered;
+	
+	@FindBy(css="#searchCard button:nth-child(2)")
+	WebElement exportButton;
+	
+	@FindBy(css="#searchCard button:nth-child(1)")
+	WebElement addRecordsButton;
 	
 	List<WebElement> divisions;
 	List<WebElement> statuses; 
@@ -490,31 +502,119 @@ public class ProjectDashboard extends TestBase {
 		
 	}
 	
+	/**
+	 * This method updates the budget value of a record to a high value
+	 * to test if currency formatting is being done correctly after save
+	 * 
+	 * @return Text in budgetField 
+	 */
 	public String getCurrencyFormattingOnUpdate() {
 		
 		System.out.println("Fetching the budget element of the first record");
 		WebElement editButton = driver.findElement(By.cssSelector("md-card.projCard:first-child > div:nth-of-type(4) > span + img"));
 		WebElement budgetInputField = driver.findElement(By.cssSelector("md-card.projCard:first-child > div:nth-of-type(4) > span + img + md-input-container > input"));
-		
+
 		// Clicking the edit button & clearing the input field
 		System.out.println("Going to click edit button for project owner...");
 		editButton.click();
 		System.out.println("Clearing budget input field...");
 		budgetInputField.clear();
 		
+		// Sending keys to input a large budget value
 		System.out.println("Sending new value of budget to input field...");
 		budgetInputField.sendKeys(TestUtil.NEW_BUDGET_VALUE);
 		
+		// Saving the new budget value
 		System.out.println("Saving the new value...");
 		editButton.click();
-		
+
+		// Fetching the budget field value after saving
 		System.out.println("Getting the value of the budget field after saving the new value...");
 		WebElement budgetField = driver.findElement(By.cssSelector("md-card.projCard:first-child > div:nth-of-type(4) > span"));
 
 		System.out.println("The updated actual value in the budget field :: " + budgetField.getText());
 		
-		return budgetField.getText();
+		return budgetField.getText();	
+	}
+	
+	/**
+	 * This method returns x-axis position values for the stats/control row and the
+	 * records row below
+	 * 
+	 * @return positionValues
+	 */
+	public Map<String, Integer> getRowAlignment() {
+		// Getting the container for the record cards
+		WebElement recordsRow = driver.findElement(By.xpath("//record[@id='record']/div[@class='row']"));
 		
+		// Getting the container for the top stats and search row
+		WebElement statsAndControlsRow = driver.findElement(By.xpath("//*[@id='statsRow']"));
+		
+		Map<String, Integer> positionValues = new HashMap<String, Integer> ();
+		
+		positionValues.put(TestUtil.RECORDS_ROW, recordsRow.getLocation().getX()); // Getting x position of records row
+		positionValues.put(TestUtil.STATS_CONTROLS_ROW, statsAndControlsRow.getLocation().getX()); // Getting x position of stats and controls row
+		
+		System.out.println("The axis positions are :: " + positionValues);
+		
+		// Returning position values
+		return positionValues;
+	}
+	
+	/**
+	 * This method checks if the Export button is visible
+	 * @return true/false
+	 */
+	public boolean isExportButtonVisible() {
+		return exportButton.isDisplayed();
+	}
+	
+	/**
+	 * This method checks if the Export button is enabled
+	 * @return true/false
+	 */
+	public boolean isExportButtonEnabled() {
+		return exportButton.isEnabled();
+	}
+	
+	/**
+	 * This method checks if the Add Records button is visible
+	 * @return true/false
+	 */
+	public boolean isAddRecordButtonVisible() {
+		return addRecordsButton.isDisplayed();
+	}
+	
+	/**
+	 * This method checks if the Add Records button is enabled
+	 * @return true/false
+	 */
+	public boolean isAddRecordButtonEnabled() {
+		return addRecordsButton.isEnabled();
+	}
+	
+	/**
+	 * This method checks if all the More Info buttons are visible for each record card
+	 * @return true/false
+	 */
+	public boolean isMoreInfoButtonsVisible() {
+		boolean isVisible = true;
+		
+		List<WebElement> records = driver.findElements(By.cssSelector("md-card.projCard"));
+		List<WebElement> moreInfoButtons = driver.findElements(By.cssSelector("md-card.projCard > div:last-child button"));
+		
+		// IF the count of more info buttons does not match the count of records, then return false
+		if(records.size()!=moreInfoButtons.size()) return false; 
+		
+		// IF all the more info buttons are visible
+		for (WebElement moreInfoButton : moreInfoButtons) {
+			// If any button is not visible, return false;
+			if(!moreInfoButton.isDisplayed()) {
+				isVisible = false;
+				break;
+			}
+		}
+		return isVisible;
 	}
 	
 }

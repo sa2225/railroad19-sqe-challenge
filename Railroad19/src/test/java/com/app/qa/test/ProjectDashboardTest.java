@@ -12,6 +12,12 @@ import com.app.qa.base.TestBase;
 import com.app.qa.pages.ProjectDashboard;
 import com.crm.qa.util.TestUtil;
 
+/**
+ * This class is responsible for the testing of project dashboard page
+ * 
+ * @author Saniya Anand
+ *
+ */
 public class ProjectDashboardTest extends TestBase {
 	
 	ProjectDashboard projectDashboard;
@@ -127,6 +133,13 @@ public class ProjectDashboardTest extends TestBase {
 	}
 	
 	@Test
+	public void validateRowAlignment() {
+		Map<String, Integer> positionValues = projectDashboard.getRowAlignment();
+		Assert.assertEquals(positionValues.get(TestUtil.RECORDS_ROW), positionValues.get(TestUtil.STATS_CONTROLS_ROW),
+				"Test Failed - The page rows are not aligned to the left (Horizontally) as their x-axis values do not match");
+	}
+	
+	@Test
 	public void validatePageHeaderText() {
 		Assert.assertEquals(projectDashboard.getHeader(), TestUtil.PAGE_HEADER, 
 				"Test Failed - The page header did not match the expected value");
@@ -136,6 +149,30 @@ public class ProjectDashboardTest extends TestBase {
 	public void validatePageHTMLTitle() {
 		Assert.assertEquals(driver.getTitle(), TestUtil.PAGE_HEADER,
 				"Test Failed - The page HTML title did not match the expected value");
+	}
+	
+	@Test
+	public void checkExportButtonVisibility() {
+		Assert.assertEquals(projectDashboard.isExportButtonVisible(), true, 
+				"Test Failed - Export button is not visible");
+	}
+	
+	@Test
+	public void checkExportButtonDisabled() {
+		Assert.assertEquals(projectDashboard.isExportButtonEnabled(), false, 
+				"Test Failed - Export button is not disabled");
+	}
+	
+	@Test
+	public void checkAddRecordButtonVisibility() {
+		Assert.assertEquals(projectDashboard.isAddRecordButtonVisible(), true, 
+				"Test Failed - Add Record button is not visible");
+	}
+	
+	@Test
+	public void checkAddRecordButtonDisabled() {
+		Assert.assertEquals(projectDashboard.isAddRecordButtonEnabled(), false, 
+				"Test Failed - Add Record button is not disabled");
 	}
 	
 	@AfterMethod

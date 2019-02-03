@@ -5,8 +5,10 @@
     <classes>
       <class name="com.app.qa.test.ProjectDashboardTest">
         <methods>
-          <include name="validateBudgetFormatOnUpdate"/>
           <include name="setUp"/>
+          <include name="validateStatusUpdateStatistics"/>
+          <include name="validateRecordUpdateSaveOnRefresh"/>
+          <include name="validateRowAlignment"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.app.qa.test.ProjectDashboardTest -->
