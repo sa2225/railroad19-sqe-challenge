@@ -1,10 +1,10 @@
 package com.crm.qa.util;
 
-public class TestUtil {
+import com.app.qa.base.TestBase;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+public class TestUtil extends TestBase {
 
-	}
+		public static long PAGE_LOAD_TIMEOUT = 30;
+		public static long IMPLICIT_WAIT = 20;
 
 }
