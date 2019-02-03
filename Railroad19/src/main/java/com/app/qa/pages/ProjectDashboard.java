@@ -410,7 +410,13 @@ public class ProjectDashboard extends TestBase {
 		return originalAndUpdatedStatistics;
 	}
 	
-	public boolean checkFeedbackForRecordUpdate() {
+	/**
+	 * This method checks if the feedback message was displayed after updating
+	 * and saving a record 
+	 * 
+	 * @return true or false
+	 */
+	public boolean isShowingFeedbackForRecordUpdate() {
 		System.out.println("Fetching the project owner elements of the first record");
 		// Extracting the original status text of the first record's status container element
 		WebElement editButton = driver.findElement(By.cssSelector("md-card.projCard:first-child > div:nth-of-type(3) > span + img"));

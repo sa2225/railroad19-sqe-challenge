@@ -41,49 +41,58 @@ ProjectDashboard projectDashboard;
 	
 	@Test(priority=1)
 	public void validateAccountingStatistics() {
-		Assert.assertEquals(projectDashboard.statsDivisionAccounting(), projectDashboard.countAccounting());
+		Assert.assertEquals(projectDashboard.statsDivisionAccounting(), projectDashboard.countAccounting(), 
+				"Test Failed - The 'accounting' division count did not match the statistic!");
 	}
 	
 	@Test(priority=2)
 	public void validateAdministrationStatistics() {
-		Assert.assertEquals(projectDashboard.statsDivisionAdministration(), projectDashboard.countAdministration());
+		Assert.assertEquals(projectDashboard.statsDivisionAdministration(), projectDashboard.countAdministration(), 
+				"Test Failed - The 'administration' division count did not match the statistic!");
 	}
 	
 	@Test(priority=3)
 	public void validateMarketingStatistics() {
-		Assert.assertEquals(projectDashboard.statsDivisionMarketing(), projectDashboard.countMarketing());
+		Assert.assertEquals(projectDashboard.statsDivisionMarketing(), projectDashboard.countMarketing(), 
+				"Test Failed - The 'marketing' division count did not match the statistic!");
 	}
 	
 	@Test(priority=4)
 	public void validateSalesStatistics() {
-		Assert.assertEquals(projectDashboard.statsDivisionSales(), projectDashboard.countSales());
+		Assert.assertEquals(projectDashboard.statsDivisionSales(), projectDashboard.countSales(), 
+				"Test Failed - The 'sales' division count did not match the statistic!");
 	}
 	
 	@Test(priority=5)
 	public void validateProductionStatistics() {
-		Assert.assertEquals(projectDashboard.statsDivisionProduction(), projectDashboard.countProduction());
+		Assert.assertEquals(projectDashboard.statsDivisionProduction(), projectDashboard.countProduction(), 
+				"Test Failed - The 'production' division count did not match the statistic!");
 	}
 	
 	/** TESTING STATUS STATISTICS **/
 	
 	@Test(priority=6)
 	public void validateArchivedStatistics() {
-		Assert.assertEquals(projectDashboard.statsStatusArchived(), projectDashboard.countArchived());
+		Assert.assertEquals(projectDashboard.statsStatusArchived(), projectDashboard.countArchived(), 
+				"Test Failed - The 'archived' status count did not match the statistic!");
 	}
 	
 	@Test(priority=7)
 	public void validateNewStatistics() {
-		Assert.assertEquals(projectDashboard.statsStatusNew(), projectDashboard.countNew());
+		Assert.assertEquals(projectDashboard.statsStatusNew(), projectDashboard.countNew(), 
+				"Test Failed - The 'new' status count did not match the statistic!");
 	}
 	
 	@Test(priority=8)
 	public void validateWorkingStatistics() {
-		Assert.assertEquals(projectDashboard.statsStatusWorking(), projectDashboard.countWorking());
+		Assert.assertEquals(projectDashboard.statsStatusWorking(), projectDashboard.countWorking(), 
+				"Test Failed - The 'working' status count did not match the statistic!");
 	}
 	
 	@Test(priority=9)
 	public void validateDeliveredStatistics() {
-		Assert.assertEquals(projectDashboard.statsStatusDelivered(), projectDashboard.countDelivered());
+		Assert.assertEquals(projectDashboard.statsStatusDelivered(), projectDashboard.countDelivered(), 
+				"Test Failed - The 'delivered' status count did not match the statistic!");
 	}
 	
 	@Test(priority=10)
@@ -113,7 +122,7 @@ ProjectDashboard projectDashboard;
 	
 	@Test(priority=12)
 	public void validateFeedbackOnUpdate() {
-		Assert.assertEquals(projectDashboard.checkFeedbackForRecordUpdate(), true);
+		Assert.assertEquals(projectDashboard.isShowingFeedbackForRecordUpdate(), true, "Test Failed - Feedback message was not displayed!");
 	}
 	
 	@AfterMethod
