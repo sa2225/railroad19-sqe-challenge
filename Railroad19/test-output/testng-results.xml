@@ -1,45 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="11" passed="11">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18523" started-at="2019-02-03T05:48:50Z" finished-at="2019-02-03T05:49:08Z">
+  <suite name="Default suite" duration-ms="65677" started-at="2019-02-03T07:09:48Z" finished-at="2019-02-03T07:10:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18523" started-at="2019-02-03T05:48:50Z" finished-at="2019-02-03T05:49:08Z">
+    <test name="Default test" duration-ms="65677" started-at="2019-02-03T07:09:48Z" finished-at="2019-02-03T07:10:54Z">
       <class name="com.app.qa.test.ProjectDashboardTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@ae45eb6]" name="setUp" is-config="true" duration-ms="5286" started-at="2019-02-03T05:48:50Z" finished-at="2019-02-03T05:48:55Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="5169" started-at="2019-02-03T07:09:48Z" finished-at="2019-02-03T07:09:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateAccountingStatistics()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@ae45eb6]" name="validateAccountingStatistics" duration-ms="1371" started-at="2019-02-03T05:48:55Z" finished-at="2019-02-03T05:48:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateAccountingStatistics -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@ae45eb6]" name="tearDown" is-config="true" duration-ms="661" started-at="2019-02-03T05:48:56Z" finished-at="2019-02-03T05:48:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@ae45eb6]" name="setUp" is-config="true" duration-ms="4267" started-at="2019-02-03T05:48:57Z" finished-at="2019-02-03T05:49:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateLogo()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@ae45eb6]" name="validateLogo" duration-ms="582" started-at="2019-02-03T05:49:01Z" finished-at="2019-02-03T05:49:02Z">
+        <test-method status="PASS" signature="validateLogo()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="validateLogo" duration-ms="45" started-at="2019-02-03T07:09:53Z" finished-at="2019-02-03T07:09:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateLogo -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@ae45eb6]" name="tearDown" is-config="true" duration-ms="658" started-at="2019-02-03T05:49:02Z" finished-at="2019-02-03T05:49:02Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="740" started-at="2019-02-03T07:09:53Z" finished-at="2019-02-03T07:09:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@ae45eb6]" name="setUp" is-config="true" duration-ms="4537" started-at="2019-02-03T05:49:02Z" finished-at="2019-02-03T05:49:07Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4659" started-at="2019-02-03T07:09:54Z" finished-at="2019-02-03T07:09:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validatePageTitle()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@ae45eb6]" name="validatePageTitle" duration-ms="404" started-at="2019-02-03T05:49:07Z" finished-at="2019-02-03T05:49:07Z">
+        <test-method status="PASS" signature="validatePageTitle()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="validatePageTitle" duration-ms="7" started-at="2019-02-03T07:09:58Z" finished-at="2019-02-03T07:09:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validatePageTitle -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@ae45eb6]" name="tearDown" is-config="true" duration-ms="695" started-at="2019-02-03T05:49:07Z" finished-at="2019-02-03T05:49:08Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="697" started-at="2019-02-03T07:09:58Z" finished-at="2019-02-03T07:09:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4568" started-at="2019-02-03T07:09:59Z" finished-at="2019-02-03T07:10:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateAccountingStatistics()[pri:1, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="validateAccountingStatistics" duration-ms="780" started-at="2019-02-03T07:10:04Z" finished-at="2019-02-03T07:10:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAccountingStatistics -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="738" started-at="2019-02-03T07:10:05Z" finished-at="2019-02-03T07:10:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4482" started-at="2019-02-03T07:10:05Z" finished-at="2019-02-03T07:10:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateAdministrationStatistics()[pri:2, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="validateAdministrationStatistics" duration-ms="769" started-at="2019-02-03T07:10:10Z" finished-at="2019-02-03T07:10:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAdministrationStatistics -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="730" started-at="2019-02-03T07:10:11Z" finished-at="2019-02-03T07:10:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4529" started-at="2019-02-03T07:10:11Z" finished-at="2019-02-03T07:10:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateMarketingStatistics()[pri:3, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="validateMarketingStatistics" duration-ms="754" started-at="2019-02-03T07:10:16Z" finished-at="2019-02-03T07:10:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateMarketingStatistics -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="741" started-at="2019-02-03T07:10:17Z" finished-at="2019-02-03T07:10:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4536" started-at="2019-02-03T07:10:17Z" finished-at="2019-02-03T07:10:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateSalesStatistics()[pri:4, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="validateSalesStatistics" duration-ms="774" started-at="2019-02-03T07:10:22Z" finished-at="2019-02-03T07:10:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSalesStatistics -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="740" started-at="2019-02-03T07:10:23Z" finished-at="2019-02-03T07:10:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4536" started-at="2019-02-03T07:10:23Z" finished-at="2019-02-03T07:10:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateProductionStatistics()[pri:5, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="validateProductionStatistics" duration-ms="811" started-at="2019-02-03T07:10:28Z" finished-at="2019-02-03T07:10:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateProductionStatistics -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="728" started-at="2019-02-03T07:10:29Z" finished-at="2019-02-03T07:10:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4626" started-at="2019-02-03T07:10:29Z" finished-at="2019-02-03T07:10:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateArchivedStatistics()[pri:6, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="validateArchivedStatistics" duration-ms="767" started-at="2019-02-03T07:10:34Z" finished-at="2019-02-03T07:10:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateArchivedStatistics -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="739" started-at="2019-02-03T07:10:35Z" finished-at="2019-02-03T07:10:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4435" started-at="2019-02-03T07:10:36Z" finished-at="2019-02-03T07:10:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateNewStatistics()[pri:7, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="validateNewStatistics" duration-ms="763" started-at="2019-02-03T07:10:40Z" finished-at="2019-02-03T07:10:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateNewStatistics -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="711" started-at="2019-02-03T07:10:41Z" finished-at="2019-02-03T07:10:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4519" started-at="2019-02-03T07:10:41Z" finished-at="2019-02-03T07:10:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateWorkingStatistics()[pri:8, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="validateWorkingStatistics" duration-ms="745" started-at="2019-02-03T07:10:46Z" finished-at="2019-02-03T07:10:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateWorkingStatistics -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="741" started-at="2019-02-03T07:10:47Z" finished-at="2019-02-03T07:10:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="setUp" is-config="true" duration-ms="4558" started-at="2019-02-03T07:10:47Z" finished-at="2019-02-03T07:10:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateDeliveredStatistics()[pri:9, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="validateDeliveredStatistics" duration-ms="773" started-at="2019-02-03T07:10:52Z" finished-at="2019-02-03T07:10:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateDeliveredStatistics -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@59f99ea]" name="tearDown" is-config="true" duration-ms="729" started-at="2019-02-03T07:10:53Z" finished-at="2019-02-03T07:10:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

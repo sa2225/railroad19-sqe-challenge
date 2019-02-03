@@ -25,7 +25,6 @@ ProjectDashboard projectDashboard;
 	public void validateLogo() {
 		String logo = projectDashboard.verifyLogo();
 		Assert.assertEquals(logo, "Project Dashboard");
-		
 	}
 	
 	@Test
@@ -35,9 +34,53 @@ ProjectDashboard projectDashboard;
 		Assert.assertEquals(title, "Project Dashboard");
 	}
 	
-	@Test
+	/** TESTING DIVISION STATISTICS **/
+	
+	@Test(priority=1)
 	public void validateAccountingStatistics() {
-		Assert.assertEquals(projectDashboard.statsDivisionAccounting(), projectDashboard.countDivisionAccounting());
+		Assert.assertEquals(projectDashboard.statsDivisionAccounting(), projectDashboard.countAccounting());
+	}
+	
+	@Test(priority=2)
+	public void validateAdministrationStatistics() {
+		Assert.assertEquals(projectDashboard.statsDivisionAdministration(), projectDashboard.countAdministration());
+	}
+	
+	@Test(priority=3)
+	public void validateMarketingStatistics() {
+		Assert.assertEquals(projectDashboard.statsDivisionMarketing(), projectDashboard.countMarketing());
+	}
+	
+	@Test(priority=4)
+	public void validateSalesStatistics() {
+		Assert.assertEquals(projectDashboard.statsDivisionSales(), projectDashboard.countSales());
+	}
+	
+	@Test(priority=5)
+	public void validateProductionStatistics() {
+		Assert.assertEquals(projectDashboard.statsDivisionProduction(), projectDashboard.countProduction());
+	}
+	
+	/** TESTING STATUS STATISTICS **/
+	
+	@Test(priority=6)
+	public void validateArchivedStatistics() {
+		Assert.assertEquals(projectDashboard.statsStatusArchived(), projectDashboard.countArchived());
+	}
+	
+	@Test(priority=7)
+	public void validateNewStatistics() {
+		Assert.assertEquals(projectDashboard.statsStatusNew(), projectDashboard.countNew());
+	}
+	
+	@Test(priority=8)
+	public void validateWorkingStatistics() {
+		Assert.assertEquals(projectDashboard.statsStatusWorking(), projectDashboard.countWorking());
+	}
+	
+	@Test(priority=9)
+	public void validateDeliveredStatistics() {
+		Assert.assertEquals(projectDashboard.statsStatusDelivered(), projectDashboard.countDelivered());
 	}
 	
 	@AfterMethod
