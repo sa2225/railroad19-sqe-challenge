@@ -2,7 +2,11 @@ package com.crm.qa.util;
 
 import java.util.List;
 
+import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.app.qa.base.TestBase;
 
@@ -63,5 +67,16 @@ public class TestUtil extends TestBase {
 				}
 			}
 			return match_count;
+		}
+		
+		/** 
+		 * This method defines an explicit wait until the desired element is visible
+		 * 
+		 * @param driver
+		 * @param locator
+		 * @param timeout
+		 */
+		public static void waitTillVisible(WebDriver driver, WebElement locator, int timeout) {
+			new WebDriverWait(driver, timeout).until(ExpectedConditions.visibilityOf(locator));
 		}
 }

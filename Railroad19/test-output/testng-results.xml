@@ -2,25 +2,29 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="7257" started-at="2019-02-03T16:53:54Z" finished-at="2019-02-03T16:54:02Z">
+  <suite name="Default suite" duration-ms="26532" started-at="2019-02-03T17:14:58Z" finished-at="2019-02-03T17:15:25Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="7257" started-at="2019-02-03T16:53:54Z" finished-at="2019-02-03T16:54:02Z">
+    <test name="Default test" duration-ms="26532" started-at="2019-02-03T17:14:58Z" finished-at="2019-02-03T17:15:25Z">
       <class name="com.app.qa.test.ProjectDashboardTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@ae45eb6]" name="setUp" is-config="true" duration-ms="5152" started-at="2019-02-03T16:53:54Z" finished-at="2019-02-03T16:54:00Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@ae45eb6]" name="setUp" is-config="true" duration-ms="5118" started-at="2019-02-03T17:14:58Z" finished-at="2019-02-03T17:15:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="validateRecordUpdateSaveOnRefresh()[pri:11, instance:com.app.qa.test.ProjectDashboardTest@ae45eb6]" name="validateRecordUpdateSaveOnRefresh" duration-ms="1362" started-at="2019-02-03T16:54:00Z" finished-at="2019-02-03T16:54:01Z">
+        <test-method status="FAIL" signature="validateFeedbackOnUpdate()[pri:12, instance:com.app.qa.test.ProjectDashboardTest@ae45eb6]" name="validateFeedbackOnUpdate" duration-ms="20720" started-at="2019-02-03T17:15:03Z" finished-at="2019-02-03T17:15:24Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Test Failed - The updates made to the record were not refelected after page refresh!]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Test Failed - The updates made to the record were not refelected after page refresh!
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
 at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.assertNotEquals(Assert.java:1157)
-at com.app.qa.test.ProjectDashboardTest.validateRecordUpdateSaveOnRefresh(ProjectDashboardTest.java:103)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:568)
+at org.testng.Assert.assertEquals(Assert.java:578)
+at com.app.qa.test.ProjectDashboardTest.validateFeedbackOnUpdate(ProjectDashboardTest.java:112)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -51,8 +55,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateRecordUpdateSaveOnRefresh -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@ae45eb6]" name="tearDown" is-config="true" duration-ms="713" started-at="2019-02-03T16:54:01Z" finished-at="2019-02-03T16:54:02Z">
+        </test-method> <!-- validateFeedbackOnUpdate -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.app.qa.test.ProjectDashboardTest@ae45eb6]" name="tearDown" is-config="true" duration-ms="672" started-at="2019-02-03T17:15:24Z" finished-at="2019-02-03T17:15:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -6,8 +6,8 @@
       <class name="com.app.qa.test.ProjectDashboardTest">
         <methods>
           <include name="setUp"/>
-          <include name="validateRecordUpdateSaveOnRefresh"/>
           <include name="tearDown"/>
+          <include name="validateFeedbackOnUpdate"/>
         </methods>
       </class> <!-- com.app.qa.test.ProjectDashboardTest -->
     </classes>

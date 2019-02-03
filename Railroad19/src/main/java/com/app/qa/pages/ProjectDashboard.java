@@ -410,6 +410,35 @@ public class ProjectDashboard extends TestBase {
 		return originalAndUpdatedStatistics;
 	}
 	
+	public boolean checkFeedbackForRecordUpdate() {
+		System.out.println("Fetching the project owner elements of the first record");
+		// Extracting the original status text of the first record's status container element
+		WebElement editButton = driver.findElement(By.cssSelector("md-card.projCard:first-child > div:nth-of-type(3) > span + img"));
+		WebElement projectOwnerInputField = driver.findElement(By.cssSelector("md-card.projCard:first-child > div:nth-of-type(3) > span + img + md-input-container > input"));
+		
+		// Clicking the edit button & clearing the input field
+		System.out.println("Going to click edit button for project owner...");
+		editButton.click();
+		System.out.println("Clearing project owner input field...");
+		projectOwnerInputField.clear();
+		
+		System.out.println("Sending new value of project owner to input field...");
+		projectOwnerInputField.sendKeys("Carlos Spaventa");
+		
+		System.out.println("Saving the new value...");
+		editButton.click();
+		
+		// Checking if the feedback toast message element appears on the screen
+		try {
+			TestUtil.waitTillVisible(driver, driver.findElement(By.cssSelector(".md-toast-content > span")), 2);
+			System.out.println("Success :: Feedback message element was found!");
+			return true;
+		} catch (Exception e) {
+			System.out.println("Failure :: Feedback message element was not found!");
+			return false;
+		}
+	}
+	
 	/**
 	 * This method checks if updating and saving a record is maintained after
 	 * refreshing the page

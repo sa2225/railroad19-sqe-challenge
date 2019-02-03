@@ -111,6 +111,11 @@ ProjectDashboard projectDashboard;
 				"Test Failed - The updates made to the record were not refelected after page refresh!");	
 	}
 	
+	@Test(priority=12)
+	public void validateFeedbackOnUpdate() {
+		Assert.assertEquals(projectDashboard.checkFeedbackForRecordUpdate(), true);
+	}
+	
 	@AfterMethod
 	public void tearDown() {
 		driver.quit();
