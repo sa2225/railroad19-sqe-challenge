@@ -1,7 +1,9 @@
 package com.app.qa.pages;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -330,6 +332,123 @@ public class ProjectDashboard extends TestBase {
 		
 		// Returning the count of elements having 'Delivered' as their status in string format
 		return "" + count_delivered ;
+	}
+	
+	/**
+	 * This method performs the task of updating the status of the first record
+	 * and returns the original and updated statistics of both the original status
+	 * and the updated status
+	 * 
+	 * 
+	 * @return originalAndUpdatedStatistics
+	 */
+	public Map<String, String> updateStatusAndStatistics() {
+		
+		// Creating a HashMap to return the original statistics values of the original status and new status & the original and new status names
+		Map<String, String> originalAndUpdatedStatistics = new HashMap<String, String>();
+		
+		
+		System.out.println("Fetching the original status of the first record");
+		// Extracting the original status text of the first record's status container element
+		String originalStatusText = statuses.get(0).getText().trim();
+		String newStatusText; // Will hold the updated status text
+		
+		// Getting the statistics for the original status (BEFORE UDPATE)
+		WebElement originalStatusStat = driver.findElement(By.xpath("//p[contains(text(),'" + originalStatusText.toLowerCase() + "')]"));
+		originalAndUpdatedStatistics.put(TestUtil.ORIGINAL_STAT_BEFORE_UPDATE, TestUtil.fetchSecondHalfofText(originalStatusStat));
+		WebElement newStatusStat; // Will hold the statistic for the new status (BEFORE UPDATE)
+		
+		// Getting the edit button element for the first record
+		WebElement editButton = driver.findElement(By.cssSelector("md-card.projCard:first-child > div:nth-of-type(5) > span + img"));
+		
+		// Getting the hidden input field element for editing the status
+		WebElement statusInputField = driver.findElement(By.cssSelector("md-card.projCard:first-child > div:nth-of-type(5) > span + img + md-input-container > input"));
+				
+		// Clicking the edit button & clearing the input field
+		System.out.println("Going to click edit button for status...");
+		editButton.click();
+		System.out.println("Clearing status input field...");
+		statusInputField.clear();
+		
+		// Filling a new value into the input field which is different from the original value
+		System.out.println("Filling new value into status field...");
+		if(!originalStatusText.equalsIgnoreCase("new")) { // Arbitrarily checking if we can set the new value as - "New" status, if its not already "New"
+			
+			// Typing text 'new' into the input field
+			statusInputField.sendKeys("new");
+			newStatusText = "new"; // (STATUS AFTER EDIT SET TO - "new")
+			
+			// Getting the corresponding statistic for the newly set status (BEFORE UPDATE/SAVE)
+			newStatusStat = driver.findElement(By.xpath("//p[contains(text(),'new')]"));
+			
+		
+		} else { // Arbitrarily setting new value as "Archived" status since "New" was the same as original
+			
+			statusInputField.sendKeys("archived"); // (STATUS AFTER EDIT SET TO - "archived")
+			newStatusText = "archived";
+			
+			// Getting the corresponding statistic for the newly set status
+			newStatusStat = driver.findElement(By.xpath("//p[contains(text(),'archived')]"));
+			
+		}
+		originalAndUpdatedStatistics.put(TestUtil.NEW_STAT_BEFORE_UPDATE, TestUtil.fetchSecondHalfofText(newStatusStat));
+		
+		/*** NOW UPDATING RECORD ***/
+		System.out.println("Saving changes to status field...");
+		editButton.click();
+		
+		// Fetching status statistics again after the update was made
+		originalStatusStat = driver.findElement(By.xpath("//p[contains(text(),'" + originalStatusText.toLowerCase() + "')]")); // AFTER UPDATE
+		newStatusStat = driver.findElement(By.xpath("//p[contains(text(),'" + newStatusText.toLowerCase() + "')]")); // AFTER UPDATE
+		
+		// Adding updated statistics into the map
+		originalAndUpdatedStatistics.put(TestUtil.NEW_STAT_AFTER_UPDATE, TestUtil.fetchSecondHalfofText(newStatusStat)); // AFTER UPDATE
+		originalAndUpdatedStatistics.put(TestUtil.ORIGINAL_STAT_AFTER_UPDATE, TestUtil.fetchSecondHalfofText(originalStatusStat)); // AFTER UPDATE
+		 
+		System.out.println("The original & updated statistics are :: " + originalAndUpdatedStatistics);
+		
+		return originalAndUpdatedStatistics;
+	}
+	
+	/**
+	 * This method checks if updating and saving a record is maintained after
+	 * refreshing the page
+	 * 
+	 * @return originalAndUpdatedProjectOwner
+	 */
+	public Map<String, String> checkRecordUpdateSaveOnRefresh() {
+		// Creating a HashMap to return the original statistics values of the original status and new status & the original and new status names
+		Map<String, String> originalAndUpdatedProjectOwner = new HashMap<String, String>();
+		
+		System.out.println("Fetching the project owner elements of the first record");
+		// Extracting the original status text of the first record's status container element
+		WebElement projectOwner = driver.findElement(By.cssSelector("md-card.projCard:first-child > div:nth-of-type(3) > span"));
+		WebElement editButton = driver.findElement(By.cssSelector("md-card.projCard:first-child > div:nth-of-type(3) > span + img"));
+		WebElement projectOwnerInputField = driver.findElement(By.cssSelector("md-card.projCard:first-child > div:nth-of-type(3) > span + img + md-input-container > input"));
+		
+		
+		originalAndUpdatedProjectOwner.put(TestUtil.PROJECT_OWNER_BEFORE_UPDATE, projectOwner.getText());
+		
+		// Clicking the edit button & clearing the input field
+		System.out.println("Going to click edit button for project owner...");
+		editButton.click();
+		System.out.println("Clearing project owner input field...");
+		projectOwnerInputField.clear();
+		
+		System.out.println("Sending new value of project owner to input field...");
+		projectOwnerInputField.sendKeys("Carlos Spaventa");
+		
+		System.out.println("Saving the new value...");
+		editButton.click();
+		
+		System.out.println("Refreshing the page to check if update was successful...");
+		driver.navigate().refresh();
+		
+		projectOwner = driver.findElement(By.cssSelector("md-card.projCard:first-child > div:nth-of-type(3) > span"));
+		originalAndUpdatedProjectOwner.put(TestUtil.PROJECT_OWNER_AFTER_UPDATE, projectOwner.getText());
+
+		return originalAndUpdatedProjectOwner;
+		
 	}
 	
 }

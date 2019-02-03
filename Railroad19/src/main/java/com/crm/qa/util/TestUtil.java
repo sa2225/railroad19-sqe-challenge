@@ -11,6 +11,14 @@ public class TestUtil extends TestBase {
 		public static long PAGE_LOAD_TIMEOUT = 30;
 		public static long IMPLICIT_WAIT = 20;
 		
+		public static final String ORIGINAL_STAT_BEFORE_UPDATE = "ORIGINAL_STAT_BEFORE_UPDATE";
+		public static final String ORIGINAL_STAT_AFTER_UPDATE = "ORIGINAL_STAT_AFTER_UPDATE";
+		public static final String NEW_STAT_BEFORE_UPDATE = "NEW_STAT_BEFORE_UPDATE";
+		public static final String NEW_STAT_AFTER_UPDATE = "NEW_STAT_AFTER_UPDATE";
+		
+		public static final String PROJECT_OWNER_BEFORE_UPDATE = "PROJECT_OWNER_BEFORE_UPDATE";
+		public static final String PROJECT_OWNER_AFTER_UPDATE = "PROJECT_OWNER_AFTER_UPDATE";
+		
 		/**
 		 * This is a util method that takes a WebElement & returns 
 		 * its second half after splitting by " " (space)

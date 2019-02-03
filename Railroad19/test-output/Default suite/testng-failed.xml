@@ -5,11 +5,8 @@
     <classes>
       <class name="com.app.qa.test.ProjectDashboardTest">
         <methods>
-          <include name="validateArchivedStatistics"/>
-          <include name="validateDeliveredStatistics"/>
-          <include name="validateWorkingStatistics"/>
           <include name="setUp"/>
-          <include name="validateNewStatistics"/>
+          <include name="validateStatusUpdateStatistics"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.app.qa.test.ProjectDashboardTest -->

@@ -1,5 +1,7 @@
 package com.app.qa.test;
 
+import java.util.Map;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -7,6 +9,7 @@ import org.testng.annotations.Test;
 
 import com.app.qa.base.TestBase;
 import com.app.qa.pages.ProjectDashboard;
+import com.crm.qa.util.TestUtil;
 
 public class ProjectDashboardTest extends TestBase {
 ProjectDashboard projectDashboard;
@@ -81,6 +84,31 @@ ProjectDashboard projectDashboard;
 	@Test(priority=9)
 	public void validateDeliveredStatistics() {
 		Assert.assertEquals(projectDashboard.statsStatusDelivered(), projectDashboard.countDelivered());
+	}
+	
+	@Test(priority=10)
+	public void validateStatusUpdateStatistics() {
+		
+		Map<String, String> originalAndUpdatedStatistics = projectDashboard.updateStatusAndStatistics();
+		
+		// ORIGINAL STATUS STATISTICS BEFORE AND AFTER UPDATE
+		int originalStatBeforeUpdate = Integer.parseInt(originalAndUpdatedStatistics.get(TestUtil.ORIGINAL_STAT_BEFORE_UPDATE));
+		int originalStatAfterUpdate = Integer.parseInt(originalAndUpdatedStatistics.get(TestUtil.ORIGINAL_STAT_AFTER_UPDATE));
+		
+		// NEW STATUS STATISTICS BEFORE AND AFTER UPDATE
+		int newStatBeforeUpdate = Integer.parseInt(originalAndUpdatedStatistics.get(TestUtil.NEW_STAT_BEFORE_UPDATE));
+		int newStatAfterUpdate = Integer.parseInt(originalAndUpdatedStatistics.get(TestUtil.NEW_STAT_AFTER_UPDATE));
+			
+		Assert.assertTrue((originalStatBeforeUpdate == originalStatAfterUpdate + 1) && (newStatBeforeUpdate == newStatAfterUpdate - 1), 
+				"Test Failed - Statistics are not getting updated on updating the status of a record!");
+	}
+	
+	@Test(priority=11)
+	public void validateRecordUpdateSaveOnRefresh() {
+		Map<String, String> originalAndUpdatedField = projectDashboard.checkRecordUpdateSaveOnRefresh();
+		Assert.assertEquals(originalAndUpdatedField.get(TestUtil.PROJECT_OWNER_BEFORE_UPDATE), 
+				originalAndUpdatedField.get(TestUtil.PROJECT_OWNER_AFTER_UPDATE), 
+				"Test Failed - The updates made to the record were not refelected after page refresh!");	
 	}
 	
 	@AfterMethod
