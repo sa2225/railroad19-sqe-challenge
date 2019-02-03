@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>11/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Feb 03 10:53:49 EST 2019</td>
+<td>Started on:</td><td>Sun Feb 03 11:53:54 EST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>69 seconds (69181 ms)</td>
+<tr><td>Total time:</td><td>7 seconds (7257 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,12 +75,11 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.app.qa.test.ProjectDashboardTest.validateStatusUpdateStatistics()'><b>validateStatusUpdateStatistics</b><br>Test class: com.app.qa.test.ProjectDashboardTest</td>
-<td><div><pre>java.lang.AssertionError: Test Failed - Statistics are not getting updated on updating the status of a record! expected [true] but found [false]
+<td title='com.app.qa.test.ProjectDashboardTest.validateRecordUpdateSaveOnRefresh()'><b>validateRecordUpdateSaveOnRefresh</b><br>Test class: com.app.qa.test.ProjectDashboardTest</td>
+<td><div><pre>java.lang.AssertionError: Test Failed - The updates made to the record were not refelected after page refresh!
 	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at com.app.qa.test.ProjectDashboardTest.validateStatusUpdateStatistics(ProjectDashboardTest.java:102)
+	at org.testng.Assert.assertNotEquals(Assert.java:1157)
+	at com.app.qa.test.ProjectDashboardTest.validateRecordUpdateSaveOnRefresh(ProjectDashboardTest.java:103)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -106,12 +105,11 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace594195094", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace594195094'><pre>java.lang.AssertionError: Test Failed - Statistics are not getting updated on updating the status of a record! expected [true] but found [false]
+</pre></div><a href='#' onClick='toggleBox("stack-trace2059572982", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2059572982'><pre>java.lang.AssertionError: Test Failed - The updates made to the record were not refelected after page refresh!
 	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at com.app.qa.test.ProjectDashboardTest.validateStatusUpdateStatistics(ProjectDashboardTest.java:102)
+	at org.testng.Assert.assertNotEquals(Assert.java:1157)
+	at com.app.qa.test.ProjectDashboardTest.validateRecordUpdateSaveOnRefresh(ProjectDashboardTest.java:103)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -138,71 +136,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>0</td>
-<td>com.app.qa.test.ProjectDashboardTest@59f99ea</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.app.qa.test.ProjectDashboardTest.validateAccountingStatistics()'><b>validateAccountingStatistics</b><br>Test class: com.app.qa.test.ProjectDashboardTest</td>
-<td></td>
-<td>0</td>
-<td>com.app.qa.test.ProjectDashboardTest@59f99ea</td></tr>
-<tr>
-<td title='com.app.qa.test.ProjectDashboardTest.validateAdministrationStatistics()'><b>validateAdministrationStatistics</b><br>Test class: com.app.qa.test.ProjectDashboardTest</td>
-<td></td>
-<td>0</td>
-<td>com.app.qa.test.ProjectDashboardTest@59f99ea</td></tr>
-<tr>
-<td title='com.app.qa.test.ProjectDashboardTest.validateArchivedStatistics()'><b>validateArchivedStatistics</b><br>Test class: com.app.qa.test.ProjectDashboardTest</td>
-<td></td>
-<td>0</td>
-<td>com.app.qa.test.ProjectDashboardTest@59f99ea</td></tr>
-<tr>
-<td title='com.app.qa.test.ProjectDashboardTest.validateDeliveredStatistics()'><b>validateDeliveredStatistics</b><br>Test class: com.app.qa.test.ProjectDashboardTest</td>
-<td></td>
-<td>0</td>
-<td>com.app.qa.test.ProjectDashboardTest@59f99ea</td></tr>
-<tr>
-<td title='com.app.qa.test.ProjectDashboardTest.validateLogo()'><b>validateLogo</b><br>Test class: com.app.qa.test.ProjectDashboardTest</td>
-<td></td>
-<td>0</td>
-<td>com.app.qa.test.ProjectDashboardTest@59f99ea</td></tr>
-<tr>
-<td title='com.app.qa.test.ProjectDashboardTest.validateMarketingStatistics()'><b>validateMarketingStatistics</b><br>Test class: com.app.qa.test.ProjectDashboardTest</td>
-<td></td>
-<td>0</td>
-<td>com.app.qa.test.ProjectDashboardTest@59f99ea</td></tr>
-<tr>
-<td title='com.app.qa.test.ProjectDashboardTest.validateNewStatistics()'><b>validateNewStatistics</b><br>Test class: com.app.qa.test.ProjectDashboardTest</td>
-<td></td>
-<td>0</td>
-<td>com.app.qa.test.ProjectDashboardTest@59f99ea</td></tr>
-<tr>
-<td title='com.app.qa.test.ProjectDashboardTest.validatePageTitle()'><b>validatePageTitle</b><br>Test class: com.app.qa.test.ProjectDashboardTest</td>
-<td></td>
-<td>0</td>
-<td>com.app.qa.test.ProjectDashboardTest@59f99ea</td></tr>
-<tr>
-<td title='com.app.qa.test.ProjectDashboardTest.validateProductionStatistics()'><b>validateProductionStatistics</b><br>Test class: com.app.qa.test.ProjectDashboardTest</td>
-<td></td>
-<td>0</td>
-<td>com.app.qa.test.ProjectDashboardTest@59f99ea</td></tr>
-<tr>
-<td title='com.app.qa.test.ProjectDashboardTest.validateSalesStatistics()'><b>validateSalesStatistics</b><br>Test class: com.app.qa.test.ProjectDashboardTest</td>
-<td></td>
-<td>0</td>
-<td>com.app.qa.test.ProjectDashboardTest@59f99ea</td></tr>
-<tr>
-<td title='com.app.qa.test.ProjectDashboardTest.validateWorkingStatistics()'><b>validateWorkingStatistics</b><br>Test class: com.app.qa.test.ProjectDashboardTest</td>
-<td></td>
-<td>0</td>
-<td>com.app.qa.test.ProjectDashboardTest@59f99ea</td></tr>
+<td>1</td>
+<td>com.app.qa.test.ProjectDashboardTest@ae45eb6</td></tr>
 </table><p>
 </body>
 </html>

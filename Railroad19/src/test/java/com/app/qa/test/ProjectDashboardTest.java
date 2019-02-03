@@ -106,7 +106,7 @@ ProjectDashboard projectDashboard;
 	@Test(priority=11)
 	public void validateRecordUpdateSaveOnRefresh() {
 		Map<String, String> originalAndUpdatedField = projectDashboard.checkRecordUpdateSaveOnRefresh();
-		Assert.assertEquals(originalAndUpdatedField.get(TestUtil.PROJECT_OWNER_BEFORE_UPDATE), 
+		Assert.assertNotEquals(originalAndUpdatedField.get(TestUtil.PROJECT_OWNER_BEFORE_UPDATE), 
 				originalAndUpdatedField.get(TestUtil.PROJECT_OWNER_AFTER_UPDATE), 
 				"Test Failed - The updates made to the record were not refelected after page refresh!");	
 	}

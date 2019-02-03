@@ -9,15 +9,14 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">11</td><td class="num">0</td><td class="num attn">1</td><td class="num">69,181</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">7,257</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.app.qa.test.ProjectDashboardTest</td><td><a href="#m0">validateStatusUpdateStatistics</a></td><td rowspan="1">1549209297191</td><td rowspan="1">477</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="11">com.app.qa.test.ProjectDashboardTest</td><td><a href="#m1">validateAccountingStatistics</a></td><td rowspan="1">1549209244720</td><td rowspan="1">725</td></tr><tr class="passedeven"><td><a href="#m2">validateAdministrationStatistics</a></td><td rowspan="1">1549209250592</td><td rowspan="1">759</td></tr><tr class="passedeven"><td><a href="#m3">validateArchivedStatistics</a></td><td rowspan="1">1549209273996</td><td rowspan="1">725</td></tr><tr class="passedeven"><td><a href="#m4">validateDeliveredStatistics</a></td><td rowspan="1">1549209291324</td><td rowspan="1">731</td></tr><tr class="passedeven"><td><a href="#m5">validateLogo</a></td><td rowspan="1">1549209234386</td><td rowspan="1">46</td></tr><tr class="passedeven"><td><a href="#m6">validateMarketingStatistics</a></td><td rowspan="1">1549209256496</td><td rowspan="1">740</td></tr><tr class="passedeven"><td><a href="#m7">validateNewStatistics</a></td><td rowspan="1">1549209279736</td><td rowspan="1">712</td></tr><tr class="passedeven"><td><a href="#m8">validatePageTitle</a></td><td rowspan="1">1549209239580</td><td rowspan="1">6</td></tr><tr class="passedeven"><td><a href="#m9">validateProductionStatistics</a></td><td rowspan="1">1549209268207</td><td rowspan="1">733</td></tr><tr class="passedeven"><td><a href="#m10">validateSalesStatistics</a></td><td rowspan="1">1549209262361</td><td rowspan="1">737</td></tr><tr class="passedeven"><td><a href="#m11">validateWorkingStatistics</a></td><td rowspan="1">1549209285537</td><td rowspan="1">733</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.app.qa.test.ProjectDashboardTest</td><td><a href="#m0">validateRecordUpdateSaveOnRefresh</a></td><td rowspan="1">1549212840130</td><td rowspan="1">1362</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.app.qa.test.ProjectDashboardTest#validateStatusUpdateStatistics</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Test Failed - Statistics are not getting updated on updating the status of a record! expected [true] but found [false]
+<h2>Default test</h2><h3 id="m0">com.app.qa.test.ProjectDashboardTest#validateRecordUpdateSaveOnRefresh</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Test Failed - The updates made to the record were not refelected after page refresh!
 	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at com.app.qa.test.ProjectDashboardTest.validateStatusUpdateStatistics(ProjectDashboardTest.java:102)
+	at org.testng.Assert.assertNotEquals(Assert.java:1157)
+	at com.app.qa.test.ProjectDashboardTest.validateRecordUpdateSaveOnRefresh(ProjectDashboardTest.java:103)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -44,16 +43,5 @@
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.app.qa.test.ProjectDashboardTest#validateAccountingStatistics</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.app.qa.test.ProjectDashboardTest#validateAdministrationStatistics</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.app.qa.test.ProjectDashboardTest#validateArchivedStatistics</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.app.qa.test.ProjectDashboardTest#validateDeliveredStatistics</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.app.qa.test.ProjectDashboardTest#validateLogo</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">com.app.qa.test.ProjectDashboardTest#validateMarketingStatistics</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">com.app.qa.test.ProjectDashboardTest#validateNewStatistics</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">com.app.qa.test.ProjectDashboardTest#validatePageTitle</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">com.app.qa.test.ProjectDashboardTest#validateProductionStatistics</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m10">com.app.qa.test.ProjectDashboardTest#validateSalesStatistics</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m11">com.app.qa.test.ProjectDashboardTest#validateWorkingStatistics</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
