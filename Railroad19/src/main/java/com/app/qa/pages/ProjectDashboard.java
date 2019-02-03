@@ -1,5 +1,6 @@
 package com.app.qa.pages;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -483,6 +484,33 @@ public class ProjectDashboard extends TestBase {
 		originalAndUpdatedProjectOwner.put(TestUtil.PROJECT_OWNER_AFTER_UPDATE, projectOwner.getText());
 
 		return originalAndUpdatedProjectOwner;
+		
+	}
+	
+	public String getCurrencyFormattingOnUpdate() {
+		
+		System.out.println("Fetching the budget element of the first record");
+		WebElement editButton = driver.findElement(By.cssSelector("md-card.projCard:first-child > div:nth-of-type(4) > span + img"));
+		WebElement budgetInputField = driver.findElement(By.cssSelector("md-card.projCard:first-child > div:nth-of-type(4) > span + img + md-input-container > input"));
+		
+		// Clicking the edit button & clearing the input field
+		System.out.println("Going to click edit button for project owner...");
+		editButton.click();
+		System.out.println("Clearing budget input field...");
+		budgetInputField.clear();
+		
+		System.out.println("Sending new value of budget to input field...");
+		budgetInputField.sendKeys(TestUtil.NEW_BUDGET_VALUE);
+		
+		System.out.println("Saving the new value...");
+		editButton.click();
+		
+		System.out.println("Getting the value of the budget field after saving the new value...");
+		WebElement budgetField = driver.findElement(By.cssSelector("md-card.projCard:first-child > div:nth-of-type(4) > span"));
+
+		System.out.println("The updated actual value in the budget field :: " + budgetField.getText());
+		
+		return budgetField.getText();
 		
 	}
 	

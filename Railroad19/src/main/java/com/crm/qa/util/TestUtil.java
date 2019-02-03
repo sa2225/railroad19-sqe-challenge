@@ -23,6 +23,8 @@ public class TestUtil extends TestBase {
 		public static final String PROJECT_OWNER_BEFORE_UPDATE = "PROJECT_OWNER_BEFORE_UPDATE";
 		public static final String PROJECT_OWNER_AFTER_UPDATE = "PROJECT_OWNER_AFTER_UPDATE";
 		
+		public static final String NEW_BUDGET_VALUE = "2782782788";
+		
 		/**
 		 * This is a util method that takes a WebElement & returns 
 		 * its second half after splitting by " " (space)

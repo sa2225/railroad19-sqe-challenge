@@ -1,5 +1,6 @@
 package com.app.qa.test;
 
+import java.text.NumberFormat;
 import java.util.Map;
 
 import org.testng.Assert;
@@ -123,6 +124,17 @@ ProjectDashboard projectDashboard;
 	@Test(priority=12)
 	public void validateFeedbackOnUpdate() {
 		Assert.assertEquals(projectDashboard.isShowingFeedbackForRecordUpdate(), true, "Test Failed - Feedback message was not displayed!");
+	}
+	
+	@Test(priority=13)
+	public void validateBudgetFormatOnUpdate() {
+		
+		NumberFormat formatter = NumberFormat.getCurrencyInstance();
+		String newBudget = formatter.format(Long.parseLong(TestUtil.NEW_BUDGET_VALUE));
+		System.out.println("The expected budget value is :: " + newBudget);
+		
+		Assert.assertEquals(newBudget, projectDashboard.getCurrencyFormattingOnUpdate(), 
+				"Test Failed - The budget currency is not getting formatted!");
 	}
 	
 	@AfterMethod
